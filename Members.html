@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="style/shared.css">
   <link rel="stylesheet" href="style/members.css">
 </head>
+
 <body>
   <main class="page-stack">
     <header>
@@ -125,11 +127,13 @@
       <div class="benefits-grid">
         <div class="benefit-card">
           <h3>Savings & Credit</h3>
-          <p>Access to competitive interest rates on savings and affordable credit facilities for personal and business needs.</p>
+          <p>Access to competitive interest rates on savings and affordable credit facilities for personal and business
+            needs.</p>
         </div>
         <div class="benefit-card">
           <h3>Business Support</h3>
-          <p>Comprehensive business services including loans, insurance, and advisory support for entrepreneurial ventures.</p>
+          <p>Comprehensive business services including loans, insurance, and advisory support for entrepreneurial
+            ventures.</p>
         </div>
         <div class="benefit-card">
           <h3>Consumer Services</h3>
@@ -137,7 +141,8 @@
         </div>
         <div class="benefit-card">
           <h3>Training & Development</h3>
-          <p>Regular workshops, skill development programs, and educational initiatives to enhance member capabilities.</p>
+          <p>Regular workshops, skill development programs, and educational initiatives to enhance member capabilities.
+          </p>
         </div>
         <div class="benefit-card">
           <h3>Community Network</h3>
@@ -145,7 +150,8 @@
         </div>
         <div class="benefit-card">
           <h3>Voting Rights</h3>
-          <p>Participate in society governance through voting rights and representation in decision-making processes.</p>
+          <p>Participate in society governance through voting rights and representation in decision-making processes.
+          </p>
         </div>
       </div>
     </section>
@@ -180,7 +186,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="member-directory">
       <h2>Member Statistics</h2>
       <p>Connect with fellow members and explore collaboration opportunities within our cooperative community.</p>
@@ -238,29 +244,8 @@
     </footer>
   </main>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    
-    if (menuToggle && nav) {
-      menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('nav-active');
-        menuToggle.classList.toggle('active');
-        document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : '';
-      });
-      
-      // Close menu when clicking on a link
-      const navLinks = nav.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          nav.classList.remove('nav-active');
-          menuToggle.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-  </script>
+  <script src="script/navigation.js"></script>
 
 </body>
+
 </html>

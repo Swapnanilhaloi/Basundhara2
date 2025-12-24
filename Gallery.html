@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="style/shared.css">
   <link rel="stylesheet" href="style/gallery.css">
 </head>
+
 <body>
   <main class="page-stack">
     <header>
@@ -33,7 +35,7 @@
     <section class="gallery-section">
       <h2>Photo Gallery</h2>
       <p>Explore moments from our community events, meetings, and activities.</p>
-      
+
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="images/gallery/event1.jpg" alt="Community Event" loading="lazy">
@@ -42,7 +44,7 @@
             <p>Members gathering for our annual cooperative meeting</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event2.jpg" alt="Training Session" loading="lazy">
           <div class="gallery-overlay">
@@ -50,7 +52,7 @@
             <p>Educational session on financial planning and savings</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event3.jpg" alt="Community Service" loading="lazy">
           <div class="gallery-overlay">
@@ -58,7 +60,7 @@
             <p>Members participating in local community initiatives</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event4.jpg" alt="Cultural Event" loading="lazy">
           <div class="gallery-overlay">
@@ -66,7 +68,7 @@
             <p>Traditional festivities and cultural programs</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event5.jpg" alt="Award Ceremony" loading="lazy">
           <div class="gallery-overlay">
@@ -74,7 +76,7 @@
             <p>Recognizing outstanding member contributions</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event6.jpg" alt="Youth Program" loading="lazy">
           <div class="gallery-overlay">
@@ -82,7 +84,7 @@
             <p>Empowering young members through skill development</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event7.jpg" alt="Board Meeting" loading="lazy">
           <div class="gallery-overlay">
@@ -90,7 +92,7 @@
             <p>Strategic planning and governance discussions</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event8.jpg" alt="Health Camp" loading="lazy">
           <div class="gallery-overlay">
@@ -98,7 +100,7 @@
             <p>Promoting health and wellness in the community</p>
           </div>
         </div>
-        
+
         <div class="gallery-item">
           <img src="images/gallery/event9.jpg" alt="Agricultural Fair" loading="lazy">
           <div class="gallery-overlay">
@@ -142,29 +144,8 @@
     </footer>
   </main>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    
-    if (menuToggle && nav) {
-      menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('nav-active');
-        menuToggle.classList.toggle('active');
-        document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : '';
-      });
-      
-      // Close menu when clicking on a link
-      const navLinks = nav.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          nav.classList.remove('nav-active');
-          menuToggle.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-  </script>
+  <script src="script/navigation.js"></script>
 
 </body>
+
 </html>
