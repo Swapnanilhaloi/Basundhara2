@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMCOS</title>
+    <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+
+    <main class="page-stack">
+        <header>
+            <div class="header-left">
+                <img class="logo" src="images/logo.png" alt="Logo">
+                <h1 class="title">Basundhara Multipurpose Cooperative Society Limited</h1>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-v2">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Welcome To <br><span style="color: var(--primary-green);">Basundhara Multipurpose Cooperative Society</span></h1>
+                    <p>Empowering the citizens of Assam through cooperative excellence, financial inclusion, and sustainable community development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-bar">
+            <div class="stat-item">
+                <h3>2022</h3>
+                <p>Established</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Active Members</p>
+            </div>
+            <div class="stat-item">
+                <h3>8+</h3>
+                <p>Districts Served</p>
+            </div>
+        </section>
+
+        <section class="about-modern">
+            <div class="about-img-stack">
+                <img src="Images/index img/Mainimg.jpeg" alt="Our Community" class="about-img-main">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Basundhara Multi-Purpose Co-Operative Society Limited, established in 2022 and based in Guwahati, operates across multiple districts of Assam with a vision to serve as a nodal Primary Co-Operative Society, providing savings, credit, business, and agri-based services to promote the socio-economic growth of its members through collective strength.</p>
+                <div class="read-more-link">
+                    <a href="About.html">Read Our Story &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="initiatives-modern">
+            <div class="section-header">
+                <h2>Our Impact Initiatives</h2>
+                <p>Building a stronger Assam through targeted community action.</p>
+            </div>
+            <div class="i-grid">
+                <div class="i-card">
+                    <div class="i-img-wrapper">
+                        <img src="Images/index img/01 .jpeg" alt="Meeting">
+                    </div>
+                    <div class="i-content">
+                        <h3>Community Beautification</h3>
+                        <p>Restoring and maintaining the natural beauty of our local neighborhoods through collective action.</p>
+                    </div>
+                </div>
+                <div class="i-card">
+                    <div class="i-img-wrapper">
+                        <img src="Images/index img/02.jpeg" alt="Meeting">
+                    </div>
+                    <div class="i-content">
+                        <h3>Youth Empowerment</h3>
+                        <p>Providing the next generation with tools, education, and resources to lead and succeed.</p>
+                    </div>
+                </div>
+                <div class="i-card">
+                    <div class="i-img-wrapper">
+                        <img src="Images/index img/03.jpeg" alt="Meeting">
+                    </div>
+                    <div class="i-content">
+                        <h3>Wellness Programs</h3>
+                        <p>Promoting health awareness and providing access to wellness resources for all members.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: basundharacooperative@gmail.com</p>
+                    <p>Phone: +91 86385-93984</p>
+                    <p>Address: House No.74, Kushal Nagar, Bamunimaidan, Guwahati 781021</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="Contact.html">Sign-Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Basundhara Multi-Purpose Co-Operative Society Limited. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.main-nav');
+        
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('nav-active');
+                menuToggle.classList.toggle('active');
+                document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : '';
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('nav-active');
+                    menuToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

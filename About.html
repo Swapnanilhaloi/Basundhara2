@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="style/shared.css">
+  <link rel="stylesheet" href="style/about.css">
+</head>
+<body>
+  <main class="page-stack">
+    <header>
+      <div class="header-left">
+        <img class="logo" src="images/logo.png" alt="Logo">
+        <h1 class="title">Basundhara Multipurpose Cooperative Society Limited</h1>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about-section" id="about">
+      <h2 style="text-align: center;">About Us</h2>
+      <p>
+        Basundhara Multi-Purpose Co-Operative Society Limited is a Co-Operative Society registered under the Assam Co-Operative Societies Act, 2007 in the year 2022 with a Vision to be a nodal Primary Co-Operative Society in the area of operation with objective to provide various services related to savings, credit, business, industry, consumer durables to its members. It operates from its Head Office at Guwahati and looks after the entire districts of Kamrup(Metro), Kamrup, Nalbari, Barpeta, Nagaon, Morigoan, Koliabor and Hojai.
+      </p>
+      <p>
+        Basundhara Multi-Purpose Co-Operative Society Limited is managed by a group of 21 Directors nominated from different fields like banking, industry, business, legal, agriculture, education and training.
+      </p>
+
+      <div class="coop-benefits">
+        <h3>The benefits of Co-operatives are as under:</h3>
+        <div class="benefits-columns">
+          <div>
+            <h4>Why Cooperative</h4>
+            <ul>
+              <li>Open Membership</li>
+              <li>Each for all and all for each</li>
+              <li>Concern for society</li>
+              <li>Economic participation by the members</li>
+              <li>Common Economic Goal</li>
+              <li>Elimination of middlemen</li>
+              <li>Element of Self Help</li>
+              <li>Democratic Member Control</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cooperative as Business</h4>
+            <ul>
+              <li>Collective Capital</li>
+              <li>Collective Ownership</li>
+              <li>Adequate Human Resources</li>
+              <li>Transparency and accountability</li>
+              <li>Affordable quality of goods and services</li>
+              <li>Presence of the elements of service and profit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Our first priority is to create a corpus fund through contribution from the members and utilise it in Agri business after acquiring suitable land. We aim to uplift the socio-economic development of our members. We are also committed to stand behind our members in need as united force.
+      </p>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: basundharacooperative@gmail.com</p>
+          <p>Phone: +91 86385-93984</p>
+          <p>Address: House No.74, Kushal Nagar, Bamunimaidan, Guwahati 781021</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Members.html">Members</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Sign-Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Basundhara Multi-Purpose Co-Operative Society Limited. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('nav-active');
+        menuToggle.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : '';
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = nav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav-active');
+          menuToggle.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

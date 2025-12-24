@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style/shared.css">
+  <link rel="stylesheet" href="style/gallery.css">
+</head>
+<body>
+  <main class="page-stack">
+    <header>
+      <div class="header-left">
+        <img class="logo" src="images/logo.png" alt="Logo">
+        <h1 class="title">Basundhara Multipurpose Cooperative Society Limited</h1>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="gallery-section">
+      <h2>Photo Gallery</h2>
+      <p>Explore moments from our community events, meetings, and activities.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery/event1.jpg" alt="Community Event" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Annual Meeting 2024</h3>
+            <p>Members gathering for our annual cooperative meeting</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event2.jpg" alt="Training Session" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Financial Literacy Workshop</h3>
+            <p>Educational session on financial planning and savings</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event3.jpg" alt="Community Service" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Community Service Day</h3>
+            <p>Members participating in local community initiatives</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event4.jpg" alt="Cultural Event" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Cultural Celebration</h3>
+            <p>Traditional festivities and cultural programs</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event5.jpg" alt="Award Ceremony" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Achievement Awards</h3>
+            <p>Recognizing outstanding member contributions</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event6.jpg" alt="Youth Program" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Youth Development Program</h3>
+            <p>Empowering young members through skill development</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event7.jpg" alt="Board Meeting" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Board Meeting</h3>
+            <p>Strategic planning and governance discussions</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event8.jpg" alt="Health Camp" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Health Awareness Camp</h3>
+            <p>Promoting health and wellness in the community</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="images/gallery/event9.jpg" alt="Agricultural Fair" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Agricultural Fair</h3>
+            <p>Showcasing local produce and farming innovations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: basundharacooperative@gmail.com</p>
+          <p>Phone: +91 86385-93984</p>
+          <p>Address: House No.74, Kushal Nagar, Bamunimaidan, Guwahati 781021</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Members.html">Members</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Sign-Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Basundhara Multi-Purpose Co-Operative Society Limited. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('nav-active');
+        menuToggle.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : '';
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = nav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          nav.classList.remove('nav-active');
+          menuToggle.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
