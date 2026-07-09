@@ -1,5 +1,5 @@
 .header {
-  background: rgb(47, 186, 61);
+  background: #4cd118;
   color: white;
   padding: 10px 0;
   display: flex;
@@ -22,7 +22,7 @@
 }
 
 .header.scrolled {
-  background: rgba(27, 94, 32, 0.92);
+  background: #4cd118;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
@@ -131,6 +131,10 @@
   display: inline-block;
 }
 
+.navIcon {
+  display: none;
+}
+
 .nav ul li a::before {
   content: '';
   position: absolute;
@@ -199,7 +203,7 @@
     gap: 8px;
     height: 65px;
     min-height: 65px;
-    background: linear-gradient(135deg, rgb(47, 186, 61), rgb(27, 94, 32));
+    background: #4cd118;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 
@@ -257,21 +261,24 @@
   .nav {
     order: 2;
     position: fixed;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(180deg, rgb(27, 94, 32), rgb(47, 186, 61));
+    top: 77px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    background: linear-gradient(165deg, rgba(35, 110, 45, 0.98), rgba(20, 70, 28, 0.98));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     overflow: hidden;
     transform: translateY(-12px) scaleY(0.96);
     transform-origin: top;
     opacity: 0;
     visibility: hidden;
     transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.4, 1), opacity 0.28s ease, visibility 0s linear 0.35s;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
     z-index: 1001;
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     pointer-events: none;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
   }
 
   .nav.navActive {
@@ -285,16 +292,15 @@
 
   .nav ul {
     flex-direction: column;
-    padding: 15px 0;
-    gap: 0;
+    padding: 14px;
+    gap: 6px;
     margin: 0;
     overflow: visible;
   }
 
   .nav ul li {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: center;
+    text-align: left;
     opacity: 0;
     transform: translateY(-8px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -305,31 +311,64 @@
     transform: translateY(0);
   }
 
-  .nav ul li:last-child {
-    border-bottom: none;
-  }
-
   .nav ul li a {
-    display: block;
-    padding: 18px 25px;
-    font-size: 1.05rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    text-align: left;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
   }
 
   .nav ul li a::before {
     display: none;
   }
 
+  .nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: none;
+  }
+
+  .nav ul li a.activeLink {
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: inset 3px 0 0 var(--accent-gold);
+  }
+
+  .navIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .ctaItem {
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
   .ctaLink {
-    border-radius: 0 !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #ffe066, var(--accent-gold)) !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
+  }
+
+  .ctaLink .navIcon {
+    background: rgba(27, 94, 32, 0.12);
   }
 
   .nav ul li a:active {
-    background: rgba(255, 255, 255, 0.2);
     transform: scale(0.98);
   }
 }
@@ -342,7 +381,9 @@
   }
 
   .nav {
-    top: 60px;
+    top: 72px;
+    left: 8px;
+    right: 8px;
   }
 
   .logo {

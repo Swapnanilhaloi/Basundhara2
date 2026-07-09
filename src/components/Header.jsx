@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 
 const NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About Us' },
-  { to: '/faq', label: 'FAQ' },
-  { to: '/gallery', label: 'Gallery' },
+  { to: '/', label: 'Home', icon: '🏠' },
+  { to: '/about', label: 'About Us', icon: '🌿' },
+  { to: '/faq', label: 'FAQ', icon: '💬' },
+  { to: '/gallery', label: 'Gallery', icon: '📸' },
 ]
 
 export default function Header() {
@@ -74,12 +74,14 @@ export default function Header() {
                 className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
                 onClick={() => setMenuOpen(false)}
               >
+                <span className={styles.navIcon} aria-hidden="true">{link.icon}</span>
                 {link.label}
               </NavLink>
             </li>
           ))}
-          <li style={{ transitionDelay: menuOpen ? `${NAV_LINKS.length * 60}ms` : '0ms' }}>
+          <li className={styles.ctaItem} style={{ transitionDelay: menuOpen ? `${NAV_LINKS.length * 60}ms` : '0ms' }}>
             <NavLink to="/contact" className={styles.ctaLink} onClick={() => setMenuOpen(false)}>
+              <span className={styles.navIcon} aria-hidden="true">🤝</span>
               Join Us
             </NavLink>
           </li>
