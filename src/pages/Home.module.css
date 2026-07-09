@@ -1,0 +1,660 @@
+.heroV2 {
+  height: 90vh;
+  min-height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/index-img/assam.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.heroContent {
+  max-width: 850px;
+  margin: 0;
+  color: white;
+  text-align: left;
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroContent h1 {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.heroContent p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 40px;
+  opacity: 0.9;
+  padding: 0;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6de22a, var(--primary-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-smooth);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrimary {
+  background: var(--primary-green);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(47, 186, 61, 0.35);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-4px);
+  background: var(--dark-green);
+  box-shadow: 0 15px 30px rgba(47, 186, 61, 0.45);
+}
+
+.btnOutline {
+  border: 2px solid white;
+  color: white;
+}
+
+.btnOutline:hover {
+  background: white;
+  color: var(--primary-green);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+}
+
+.statsBar {
+  max-width: 1000px;
+  margin: 10px auto 0;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
+.statIcon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.statItem h3 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--dark-green), var(--primary-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.aboutModern {
+  padding: 120px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.aboutImgStack {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.aboutImgMain {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 30px 30px 0 var(--light-green);
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.aboutBadge {
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+  color: white;
+  padding: 22px 26px;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: var(--shadow-elevated);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.aboutBadge strong {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.aboutBadge span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .aboutBadge {
+    right: 10px;
+    bottom: -18px;
+    padding: 14px 18px;
+  }
+
+  .aboutBadge strong {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutBadge {
+    position: static;
+    margin-top: 15px;
+    display: inline-block;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.aboutText h2 {
+  font-size: 3rem;
+  color: var(--dark-green);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.aboutText h2::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--primary-green);
+}
+
+.readMoreLink {
+  margin-top: 40px;
+}
+
+.readMoreLink a {
+  color: var(--primary-green);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.readMoreLink a:hover {
+  color: var(--dark-green);
+  border-bottom-color: var(--dark-green);
+  transform: translateX(5px);
+}
+
+.initiativesModern {
+  background: #f4f8fb;
+  padding: 100px 8%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: var(--dark-green);
+}
+
+.iGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.iCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid #eee;
+}
+
+.iCard:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.iImgWrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.iCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+  max-width: 100%;
+}
+
+.iCard:hover img {
+  transform: scale(1.1);
+}
+
+.iContent {
+  padding: 30px;
+}
+
+.iContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: var(--dark-green);
+}
+
+.iTag {
+  display: inline-block;
+  background: var(--light-green);
+  color: var(--dark-green);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .aboutModern {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 50px 5%;
+  }
+
+  .heroV2 {
+    padding: 0 5%;
+    padding-top: 80px;
+    height: auto;
+    min-height: 70vh;
+    background-attachment: scroll;
+  }
+
+  .statsBar {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-top: -30px;
+    padding: 30px 20px;
+  }
+
+  .statItem {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .statItem:last-child {
+    border: none;
+  }
+
+  .initiativesModern {
+    padding: 50px 5%;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .aboutText h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroV2 {
+    padding: 0 4%;
+    padding-top: 60px;
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    margin-bottom: 12px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .heroContent p {
+    font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .statsBar {
+    width: 95%;
+    padding: 20px 15px;
+    margin-top: -15px;
+    border-radius: 15px;
+  }
+
+  .statItem h3 {
+    font-size: 1.8rem;
+  }
+
+  .statItem p {
+    font-size: 0.75rem;
+  }
+
+  .aboutModern {
+    padding: 35px 4%;
+    gap: 25px;
+  }
+
+  .aboutImgMain {
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0 var(--light-green);
+  }
+
+  .aboutText h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .aboutText p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+
+  .initiativesModern {
+    padding: 35px 4%;
+  }
+
+  .sectionHeader {
+    margin-bottom: 30px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.6rem;
+  }
+
+  .iGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .iContent {
+    padding: 18px;
+  }
+
+  .iContent h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroV2 {
+    padding: 0 3%;
+    padding-top: 50px;
+    min-height: 55vh;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    margin-bottom: 10px;
+  }
+
+  .heroContent p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .statsBar {
+    width: 98%;
+    padding: 18px 12px;
+    margin-top: -10px;
+  }
+
+  .statItem h3 {
+    font-size: 1.6rem;
+  }
+
+  .aboutModern {
+    padding: 30px 3%;
+    gap: 20px;
+  }
+
+  .aboutImgMain {
+    height: 250px;
+  }
+
+  .aboutText h2 {
+    font-size: 1.4rem;
+  }
+
+  .initiativesModern {
+    padding: 30px 3%;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroV2 {
+    min-height: 50vh;
+    padding: 0 3%;
+    padding-top: 40px;
+  }
+
+  .heroContent {
+    padding: 0;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.4rem, 9vw, 2rem);
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .heroContent p {
+    font-size: clamp(0.8rem, 3vw, 0.85rem);
+    line-height: 1.4;
+  }
+
+  .statsBar {
+    padding: 15px 10px;
+    margin-top: -5px;
+    border-radius: 12px;
+  }
+
+  .statItem {
+    padding: 15px 0;
+  }
+
+  .statItem h3 {
+    font-size: 1.5rem;
+  }
+
+  .statItem p {
+    font-size: 0.7rem;
+  }
+
+  .aboutModern {
+    padding: 25px 3%;
+    gap: 18px;
+  }
+
+  .aboutImgMain {
+    height: 220px;
+    border-radius: 15px;
+  }
+
+  .aboutText h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .aboutText p {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .readMoreLink {
+    margin-top: 20px;
+  }
+
+  .readMoreLink a {
+    font-size: 0.9rem;
+    padding-bottom: 3px;
+  }
+
+  .initiativesModern {
+    padding: 25px 3%;
+  }
+
+  .sectionHeader {
+    margin-bottom: 25px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.3rem;
+  }
+
+  .iGrid {
+    gap: 15px;
+  }
+
+  .iImgWrapper {
+    height: 180px;
+  }
+
+  .iContent {
+    padding: 15px;
+  }
+
+  .iContent h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .heroV2 {
+    padding: 0 2%;
+    padding-top: 35px;
+    min-height: 45vh;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(1.2rem, 10vw, 1.8rem);
+  }
+
+  .statsBar {
+    width: 100%;
+    padding: 12px 8px;
+    margin: -5px 0 0 0;
+  }
+
+  .aboutModern {
+    padding: 20px 2%;
+  }
+
+  .initiativesModern {
+    padding: 20px 2%;
+  }
+
+  .iImgWrapper {
+    height: 160px;
+  }
+}

@@ -1,0 +1,318 @@
+.aboutWrapper {
+  max-width: 1600px;
+  margin: -60px auto 0;
+  padding: 0 4%;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: start;
+  position: relative;
+  z-index: 5;
+}
+
+.aboutSection {
+  padding: 40px;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+}
+
+.aboutSection p {
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.aboutSidebar {
+  background: linear-gradient(160deg, var(--dark-green), var(--primary-green));
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-elevated);
+  position: sticky;
+  top: 100px;
+}
+
+.aboutSidebar h3 {
+  margin: 0 0 22px;
+  font-size: 1.3rem;
+}
+
+.aboutSidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aboutSidebar li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sidebarIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.aboutSidebar strong {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-gold);
+  margin-bottom: 4px;
+}
+
+.aboutSidebar li div span {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.governanceCallout {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--light-green);
+  border-left: 4px solid var(--primary-green);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.governanceCallout p {
+  margin: 0;
+  color: var(--dark-green);
+  font-size: 1em;
+}
+
+.governanceIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+/* Focus areas */
+.focusSection {
+  max-width: 1600px;
+  margin: 70px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+.focusHeader {
+  margin-bottom: 40px;
+}
+
+.eyebrowDark {
+  display: inline-block;
+  color: var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.focusSection h2 {
+  color: var(--dark-green);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.focusCard {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #eef3ee;
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+}
+
+.focusCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.focusIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--light-green);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.focusCard h3 {
+  color: var(--dark-green);
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.focusCard p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Benefits */
+.benefitsSection {
+  max-width: 1600px;
+  margin: 0 auto 70px;
+  padding: 0 4%;
+}
+
+.benefitsHeading {
+  text-align: center;
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.benefitsColumns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.benefitsColumns > div {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #eef3ee;
+}
+
+.benefitsColumns h4 {
+  margin: 0 0 16px;
+  color: var(--dark-green);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colIcon {
+  font-size: 1.3rem;
+}
+
+.benefitsColumns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.benefitsColumns li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #eef3ee;
+  font-size: 0.98em;
+  color: var(--text-muted);
+}
+
+.benefitsColumns li:first-child {
+  border-top: none;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--light-green);
+  color: var(--dark-green);
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+  .aboutWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutSidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutWrapper {
+    margin: -40px auto 0;
+    padding: 0 5%;
+    gap: 20px;
+  }
+
+  .aboutSection,
+  .aboutSidebar {
+    padding: 24px 20px;
+  }
+
+  .aboutSection p {
+    font-size: 1em;
+  }
+
+  .governanceCallout {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .focusSection,
+  .benefitsSection {
+    margin-top: 50px;
+    padding: 0 5%;
+  }
+
+  .focusSection h2 {
+    font-size: 1.7rem;
+  }
+
+  .benefitsHeading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutWrapper {
+    margin: -30px auto 0;
+  }
+
+  .aboutSection,
+  .aboutSidebar {
+    padding: 18px 14px;
+  }
+
+  .aboutSection p {
+    font-size: 0.95em;
+  }
+
+  .focusCard {
+    padding: 24px 18px;
+  }
+}
