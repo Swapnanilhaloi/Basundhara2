@@ -131,7 +131,7 @@
 }
 
 .contactSection {
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-elevated);

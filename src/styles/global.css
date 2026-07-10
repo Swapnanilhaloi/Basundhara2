@@ -5,7 +5,8 @@
   --accent-gold: #ffd700;
   --text-dark: #2c3e50;
   --text-muted: #5b6b73;
-  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-bg: rgba(250, 251, 248, 0.9);
+  --card-bg: #fafbf8;
 
   --font-heading: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;

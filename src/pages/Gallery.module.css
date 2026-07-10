@@ -2,7 +2,7 @@
   width: 94%;
   max-width: 1600px;
   margin: -50px auto 40px;
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-elevated);
   padding: 36px 32px;
