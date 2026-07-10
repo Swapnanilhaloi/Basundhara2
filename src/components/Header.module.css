@@ -155,10 +155,6 @@
   transform: translateY(-2px);
 }
 
-.nav ul li a.activeLink {
-  background: rgba(255, 255, 255, 0.2);
-}
-
 .ctaLink {
   background: white;
   color: var(--dark-green) !important;
